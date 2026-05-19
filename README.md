@@ -1,6 +1,6 @@
 # 电商订单经营与履约质量全链路分析
 
-> 基于销售、品类、区域、卖家、物流、评价与支付数据的 Tableau 风格可视化分析作品集  
+> 基于销售、品类、区域、卖家、物流、评价与支付数据的电商 BI 可视化分析作品集
 > Portfolio for Data Analyst / BI Analyst / Business Analyst internship applications
 
 ## 项目定位
@@ -33,7 +33,7 @@ lshike029-cyber.github.io
   - Dashboard 1：经营总览与收入贡献分析
   - Dashboard 2：履约体验与风险诊断分析
 - 使用 SQL Server 生成 8 张 BI 汇总表
-- 使用 HTML / CSS / JavaScript 实现 Tableau Public 风格的交互式可视化页面
+- 使用 HTML / CSS / JavaScript / SVG 实现交互式可视化页面
 - 支持图表 hover 提示和点击固定信息面板
 - 输出可用于简历和面试讲解的业务洞察
 
@@ -45,7 +45,7 @@ lshike029-cyber.github.io
 | 数据处理 | SQL、Python |
 | 指标建模 | 月度 KPI、品类汇总、地区汇总、支付分析、物流分析、评价分析、卖家排行 |
 | 可视化 | HTML、CSS、JavaScript、SVG |
-| 设计风格 | Tableau Public 风格、商务 BI 深色仪表盘 |
+| 页面呈现 | 经营总览、履约诊断、图表交互、移动端适配 |
 | 部署 | GitHub Pages |
 
 ## 数据来源
@@ -179,4 +179,3 @@ http://localhost:8093
 ## 项目故事线
 
 本项目围绕电商平台的“经营增长”和“履约体验”两个核心问题展开。首先通过月度 KPI、订单状态、品类排行、地区排行和卖家排行分析平台整体经营表现，识别核心收入来源；随后进一步从配送时长、延迟交货率和用户评分切入，分析物流履约对用户体验的影响，并定位高价值但体验风险较高的品类、地区和卖家。最终为平台提出核心市场保障、物流履约优化、卖家分层管理和分期支付运营等策略建议。
-
