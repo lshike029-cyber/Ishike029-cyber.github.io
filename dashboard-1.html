@@ -1,30 +1,30 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Executive Sales Dashboard</title><style>
 :root {
-  --bg: #071f24;
-  --bg2: #0b3035;
-  --panel: #12383d;
-  --panel2: #183f44;
-  --tile: #1c474d;
-  --line: rgba(210, 231, 235, .18);
-  --ink: #eaf4f6;
-  --muted: #95aeb4;
-  --gold: #d1953f;
-  --red: #9d263d;
-  --orange: #c26a2c;
-  --purple: #8150a6;
-  --blue: #4a9dff;
-  --green: #4aa564;
-  --gray: #a6adb2;
-  --shadow: 0 24px 60px rgba(0,0,0,.32);
+  --bg: #f1f1ee;
+  --bg2: #deded8;
+  --panel: #fbfbf8;
+  --panel2: #f5f5f1;
+  --tile: #ffffff;
+  --line: rgba(24, 28, 32, .14);
+  --ink: #25282c;
+  --muted: #62676d;
+  --gold: #a17616;
+  --red: #8f1f1b;
+  --orange: #c26a18;
+  --purple: #514d8c;
+  --blue: #020646;
+  --green: #0b5e1a;
+  --gray: #777b80;
+  --shadow: 0 18px 44px rgba(32, 36, 40, .12);
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 18% 0%, rgba(209,149,63,.18), transparent 30%),
-    radial-gradient(circle at 90% 12%, rgba(129,80,166,.18), transparent 28%),
-    linear-gradient(180deg, #06191d 0%, #09242a 100%);
+    linear-gradient(90deg, rgba(209,211,204,.9) 0 155px, transparent 155px),
+    radial-gradient(circle at 80% 0%, rgba(161,118,22,.11), transparent 30%),
+    linear-gradient(180deg, #f7f7f4 0%, #e8e8e3 100%);
   color: var(--ink);
   font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
   line-height: 1.5;
@@ -34,7 +34,7 @@ a { color: inherit; text-decoration: none; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(5, 20, 24, .94);
+  background: rgba(247, 247, 244, .94);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(14px);
 }
@@ -52,13 +52,13 @@ a { color: inherit; text-decoration: none; }
 .brand-mark {
   width: 30px; height: 30px; border-radius: 4px;
   background:
-    linear-gradient(135deg, var(--gold), transparent 48%),
-    linear-gradient(45deg, var(--purple), var(--blue));
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.35);
+    linear-gradient(135deg, var(--green), transparent 48%),
+    linear-gradient(45deg, var(--gold), var(--blue));
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.15);
 }
 .nav { display: flex; gap: 18px; color: var(--muted); font-size: 13px; white-space: nowrap; }
 .nav a { padding: 7px 8px; border-radius: 4px; }
-.nav a:hover { color: #fff; background: rgba(255,255,255,.08); }
+.nav a:hover { color: var(--blue); background: rgba(2,6,70,.07); }
 .page { max-width: 1500px; margin: 0 auto; padding: 24px; }
 .hero {
   min-height: 650px;
@@ -69,31 +69,31 @@ a { color: inherit; text-decoration: none; }
 }
 .eyebrow { color: var(--gold); font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 14px; }
 h1 { margin: 0 0 16px; font-size: 56px; line-height: 1.03; letter-spacing: 0; }
-.copy { max-width: 700px; margin: 0 0 24px; color: #c5d5d9; font-size: 18px; }
+.copy { max-width: 700px; margin: 0 0 24px; color: #555b61; font-size: 18px; }
 .actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 22px 0; }
 .btn {
   min-height: 42px; display: inline-flex; align-items: center; justify-content: center;
   padding: 0 16px; border-radius: 4px; border: 1px solid var(--line);
-  background: rgba(255,255,255,.08); color: #fff; font-weight: 800; font-size: 13px;
+  background: #ffffff; color: var(--blue); font-weight: 800; font-size: 13px;
 }
-.btn.primary { background: var(--gold); border-color: var(--gold); color: #06191d; }
+.btn.primary { background: var(--blue); border-color: var(--blue); color: #fff; }
 .btn:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
 .cover {
-  background: #102f34;
+  background: #d9d9d2;
   border: 1px solid var(--line);
   padding: 12px;
   box-shadow: var(--shadow);
 }
-.cover img { display: block; width: 100%; border: 1px solid rgba(255,255,255,.14); }
+.cover img { display: block; width: 100%; border: 1px solid rgba(24,28,32,.14); }
 .stat-row { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; }
 .stat, .story, .panel, .kpi {
-  background: linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.025));
+  background: linear-gradient(180deg, #ffffff, #f6f6f2);
   border: 1px solid var(--line);
-  box-shadow: 0 14px 34px rgba(0,0,0,.18);
+  box-shadow: var(--shadow);
 }
 .stat { padding: 14px; min-height: 92px; }
 .stat small, .kpi small { display: block; color: var(--muted); font-size: 12px; margin-bottom: 7px; }
-.stat b, .kpi b { display: block; font-size: 27px; line-height: 1.08; color: #fff; }
+.stat b, .kpi b { display: block; font-size: 27px; line-height: 1.08; color: var(--blue); }
 .stat span, .kpi span { display: block; color: var(--muted); font-size: 12px; margin-top: 8px; }
 section { padding: 34px 0; }
 .section-head { display: flex; justify-content: space-between; gap: 20px; align-items: end; margin-bottom: 16px; }
@@ -103,14 +103,14 @@ h2 { margin: 0; font-size: 30px; line-height: 1.15; }
 .span-3 { grid-column: span 3; } .span-4 { grid-column: span 4; } .span-5 { grid-column: span 5; } .span-6 { grid-column: span 6; } .span-7 { grid-column: span 7; } .span-8 { grid-column: span 8; } .span-12 { grid-column: span 12; }
 .story { padding: 16px; }
 .story h3 { margin: 0 0 8px; font-size: 17px; }
-.story p { margin: 0; color: #c5d5d9; font-size: 14px; }
+.story p { margin: 0; color: #555b61; font-size: 14px; }
 .dashboard-shell {
   display: grid;
   grid-template-columns: 155px 1fr;
   gap: 14px;
 }
 .rail {
-  background: #08262b;
+  background: #d7d7d1;
   border: 1px solid var(--line);
   padding: 14px 12px;
   min-height: 820px;
@@ -120,8 +120,8 @@ h2 { margin: 0; font-size: 30px; line-height: 1.15; }
 .filter label { display: block; color: var(--muted); font-size: 11px; margin-bottom: 6px; }
 .select {
   border: 1px solid var(--line);
-  background: #12383d;
-  color: #fff;
+  background: #ecece7;
+  color: var(--ink);
   padding: 8px;
   font-size: 12px;
 }
@@ -136,26 +136,26 @@ h2 { margin: 0; font-size: 30px; line-height: 1.15; }
 .dash-title h1 { font-size: 36px; }
 .kpis { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 8px; margin-bottom: 12px; }
 .kpis.five { grid-template-columns: repeat(5,minmax(0,1fr)); }
-.kpi { padding: 12px; min-height: 90px; background: #153a40; }
-.panel { padding: 14px; min-height: 330px; background: #10353a; }
+.kpi { padding: 12px; min-height: 90px; background: #ffffff; }
+.panel { padding: 14px; min-height: 330px; background: #ffffff; }
 .panel.tall { min-height: 410px; }
 .panel-head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; margin-bottom: 6px; }
-.panel-head h3 { margin: 0; font-size: 16px; color: #fff; }
+.panel-head h3 { margin: 0; font-size: 16px; color: var(--ink); }
 .panel-head span { color: var(--muted); font-size: 12px; }
 .desc { color: var(--muted); font-size: 12px; margin: 0 0 8px; }
 svg { width: 100%; height: 260px; display: block; overflow: visible; }
 .tall svg { height: 340px; }
-.gridline { stroke: rgba(224,238,240,.16); stroke-width: 1; }
-.axis { fill: #9ab2b8; font-size: 10.5px; }
+.gridline { stroke: rgba(42,46,52,.13); stroke-width: 1; }
+.axis { fill: #60666c; font-size: 10.5px; }
 .insights {
-  background: #07191d;
-  border: 1px solid rgba(209,149,63,.38);
+  background: #f8f8f4;
+  border: 1px solid rgba(161,118,22,.36);
   padding: 18px;
   min-height: 260px;
 }
 .insights h3 { margin: 0 0 12px; font-size: 18px; color: var(--gold); }
 .insights ol { margin: 0; padding-left: 20px; }
-.insights li { color: #d6e3e6; margin-bottom: 10px; font-size: 14px; }
+.insights li { color: #3f4448; margin-bottom: 10px; font-size: 14px; }
 .legend { display: flex; flex-wrap: wrap; gap: 12px; color: var(--muted); font-size: 12px; margin-top: 5px; }
 .legend i { display:inline-block; width:10px; height:10px; margin-right:5px; }
 .tooltip {
@@ -164,10 +164,10 @@ svg { width: 100%; height: 260px; display: block; overflow: visible; }
   pointer-events: none;
   max-width: 280px;
   padding: 10px 12px;
-  background: rgba(5, 20, 24, .96);
-  color: #fff;
-  border: 1px solid rgba(209,149,63,.55);
-  box-shadow: 0 16px 40px rgba(0,0,0,.32);
+  background: rgba(255, 255, 255, .98);
+  color: var(--ink);
+  border: 1px solid rgba(2,6,70,.22);
+  box-shadow: 0 16px 40px rgba(22,26,30,.18);
   font-size: 12px;
   line-height: 1.55;
   display: none;
@@ -179,15 +179,15 @@ svg { width: 100%; height: 260px; display: block; overflow: visible; }
   bottom: 24px;
   z-index: 180;
   width: min(360px, calc(100vw - 48px));
-  background: rgba(5, 20, 24, .97);
-  border: 1px solid rgba(209,149,63,.62);
-  box-shadow: 0 20px 54px rgba(0,0,0,.38);
-  color: #d8e6e9;
+  background: rgba(255, 255, 255, .98);
+  border: 1px solid rgba(2,6,70,.24);
+  box-shadow: 0 20px 54px rgba(22,26,30,.2);
+  color: var(--ink);
   padding: 14px 15px;
   display: none;
 }
 .inspector h4 { margin: 0 0 8px; color: var(--gold); font-size: 15px; }
-.inspector p { margin: 0; color: #d8e6e9; font-size: 12px; line-height: 1.6; }
+.inspector p { margin: 0; color: #3f4448; font-size: 12px; line-height: 1.6; }
 .inspector button {
   position: absolute;
   top: 8px;
@@ -213,7 +213,7 @@ const money=v=>'R$ '+Math.round(v||0).toLocaleString('zh-CN');
 const nfmt=v=>Math.round(v||0).toLocaleString('zh-CN');
 const pct=v=>((v||0)*100).toFixed(1)+'%';
 const month=s=>String(s).slice(0,7);
-const C={blue:'#4a9dff',green:'#4aa564',orange:'#c26a2c',red:'#9d263d',purple:'#8150a6',gold:'#d1953f',gray:'#a6adb2'};
+const C={blue:'#020646',green:'#0b5e1a',orange:'#c26a18',red:'#8f1f1b',purple:'#514d8c',gold:'#a17616',gray:'#777b80'};
 let activeTip, activeInspector;
 function htmlEscape(value){return String(value ?? '').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 function tip(){if(!activeTip){activeTip=document.createElement('div');activeTip.className='tooltip';document.body.appendChild(activeTip)}return activeTip}
@@ -230,23 +230,23 @@ function axes(s,w,h,p){for(let i=0;i<=4;i++){const y=p.t+(h-p.t-p.b)*i/4;add(s,'
 function lineChart(id,rows,series){
  const s=svg(id),w=s.clientWidth||700,h=260,p={l:54,r:30,t:16,b:38};s.setAttribute('viewBox',`0 0 ${w} ${h}`);axes(s,w,h,p);
  const x=i=>p.l+i*(w-p.l-p.r)/Math.max(rows.length-1,1);
- series.forEach(sr=>{const m=max(rows,sr.value),y=v=>h-p.b-(v/m)*(h-p.t-p.b);const d=rows.map((r,i)=>`${i?'L':'M'}${x(i)},${y(sr.value(r))}`).join(' ');const path=add(s,'path',{d,fill:'none',stroke:sr.color,'stroke-width':sr.width||3,'stroke-dasharray':sr.dash||''});bindInfo(path,sr.name||'折线指标',`整条线：${htmlEscape(sr.name||'指标')}<br>最高值：${htmlEscape((sr.format||nfmt)(m))}<br>点击圆点可查看单月明细。`);rows.forEach((r,i)=>{const v=sr.value(r);const point=add(s,'circle',{cx:x(i),cy:y(v),r:4,fill:sr.color,stroke:'#071f24','stroke-width':1.2,opacity:.96});bindInfo(point,`${sr.name||'指标'} · ${month(r.month_start)}`,`${htmlEscape(sr.name||'指标')}：${htmlEscape((sr.format||nfmt)(v))}<br>月份：${month(r.month_start)}${r.order_count!==undefined?`<br>订单数：${nfmt(r.order_count)}`:''}${r.revenue!==undefined?`<br>销售额：${money(r.revenue)}`:''}`)})});
+ series.forEach(sr=>{const m=max(rows,sr.value),y=v=>h-p.b-(v/m)*(h-p.t-p.b);const d=rows.map((r,i)=>`${i?'L':'M'}${x(i)},${y(sr.value(r))}`).join(' ');const path=add(s,'path',{d,fill:'none',stroke:sr.color,'stroke-width':sr.width||3,'stroke-dasharray':sr.dash||''});bindInfo(path,sr.name||'折线指标',`整条线：${htmlEscape(sr.name||'指标')}<br>最高值：${htmlEscape((sr.format||nfmt)(m))}<br>点击圆点可查看单月明细。`);rows.forEach((r,i)=>{const v=sr.value(r);const point=add(s,'circle',{cx:x(i),cy:y(v),r:4,fill:sr.color,stroke:'#ffffff','stroke-width':1.2,opacity:.96});bindInfo(point,`${sr.name||'指标'} · ${month(r.month_start)}`,`${htmlEscape(sr.name||'指标')}：${htmlEscape((sr.format||nfmt)(v))}<br>月份：${month(r.month_start)}${r.order_count!==undefined?`<br>订单数：${nfmt(r.order_count)}`:''}${r.revenue!==undefined?`<br>销售额：${money(r.revenue)}`:''}`)})});
  rows.forEach((r,i)=>{if(i%Math.ceil(rows.length/6)===0)add(s,'text',{x:x(i),y:h-14,'text-anchor':'middle',class:'axis'},month(r.month_start))});
 }
 function bars(id,rows,label,value,detail,color,opts={}){
  const s=svg(id),w=s.clientWidth||640,h=opts.h||260,p={l:opts.left||120,r:opts.right||145,t:8,b:18};s.setAttribute('viewBox',`0 0 ${w} ${h}`);
  const m=max(rows,value),step=(h-p.t-p.b)/rows.length,bh=Math.max(9,step*.56);
- rows.forEach((r,i)=>{const y=p.t+i*step+3,bw=(value(r)/m)*(w-p.l-p.r);add(s,'text',{x:p.l-8,y:y+bh*.75,'text-anchor':'end',fill:'#d8e6e9','font-size':11},String(label(r)).slice(0,opts.labelLen||15));const rect=add(s,'rect',{x:p.l,y,width:bw,height:bh,fill:typeof color==='function'?color(r):color});bindInfo(rect,String(label(r)),`数值：${htmlEscape(detail(r))}<br>排名：${i+1}${r.order_count!==undefined?`<br>订单数：${nfmt(r.order_count)}`:''}${r.avg_review_score!==undefined?`<br>平均评分：${Number(r.avg_review_score||0).toFixed(2)}`:''}${r.late_delivery_rate!==undefined?`<br>延迟率：${pct(r.late_delivery_rate)}`:''}`);add(s,'text',{x:w-8,y:y+bh*.75,'text-anchor':'end',fill:'#a9bdc2','font-size':11},detail(r))});
+ rows.forEach((r,i)=>{const y=p.t+i*step+3,bw=(value(r)/m)*(w-p.l-p.r);add(s,'text',{x:p.l-8,y:y+bh*.75,'text-anchor':'end',fill:'#303438','font-size':11},String(label(r)).slice(0,opts.labelLen||15));const rect=add(s,'rect',{x:p.l,y,width:bw,height:bh,fill:typeof color==='function'?color(r):color});bindInfo(rect,String(label(r)),`数值：${htmlEscape(detail(r))}<br>排名：${i+1}${r.order_count!==undefined?`<br>订单数：${nfmt(r.order_count)}`:''}${r.avg_review_score!==undefined?`<br>平均评分：${Number(r.avg_review_score||0).toFixed(2)}`:''}${r.late_delivery_rate!==undefined?`<br>延迟率：${pct(r.late_delivery_rate)}`:''}`);add(s,'text',{x:w-8,y:y+bh*.75,'text-anchor':'end',fill:'#565d64','font-size':11},detail(r))});
 }
 function vbars(id,rows,label,value,detail,color){
  const s=svg(id),w=s.clientWidth||620,h=260,p={l:48,r:22,t:16,b:38};s.setAttribute('viewBox',`0 0 ${w} ${h}`);axes(s,w,h,p);
  const m=max(rows,value),step=(w-p.l-p.r)/rows.length,bw=step*.52;
- rows.forEach((r,i)=>{const x=p.l+i*step+step*.24,bh=(value(r)/m)*(h-p.t-p.b);const rect=add(s,'rect',{x,y:h-p.b-bh,width:bw,height:bh,fill:typeof color==='function'?color(r):color});bindInfo(rect,String(label(r)),`数值：${htmlEscape(detail(r))}${r.order_count!==undefined?`<br>订单数：${nfmt(r.order_count)}`:''}${r.review_count!==undefined?`<br>评价数：${nfmt(r.review_count)}`:''}${r.avg_review_score!==undefined?`<br>平均评分：${Number(r.avg_review_score||0).toFixed(2)}`:''}${r.late_delivery_rate!==undefined?`<br>延迟率：${pct(r.late_delivery_rate)}`:''}`);add(s,'text',{x:x+bw/2,y:h-14,'text-anchor':'middle',class:'axis'},label(r));add(s,'text',{x:x+bw/2,y:h-p.b-bh-7,'text-anchor':'middle',fill:'#d8e6e9','font-size':11},detail(r))});
+ rows.forEach((r,i)=>{const x=p.l+i*step+step*.24,bh=(value(r)/m)*(h-p.t-p.b);const rect=add(s,'rect',{x,y:h-p.b-bh,width:bw,height:bh,fill:typeof color==='function'?color(r):color});bindInfo(rect,String(label(r)),`数值：${htmlEscape(detail(r))}${r.order_count!==undefined?`<br>订单数：${nfmt(r.order_count)}`:''}${r.review_count!==undefined?`<br>评价数：${nfmt(r.review_count)}`:''}${r.avg_review_score!==undefined?`<br>平均评分：${Number(r.avg_review_score||0).toFixed(2)}`:''}${r.late_delivery_rate!==undefined?`<br>延迟率：${pct(r.late_delivery_rate)}`:''}`);add(s,'text',{x:x+bw/2,y:h-14,'text-anchor':'middle',class:'axis'},label(r));add(s,'text',{x:x+bw/2,y:h-p.b-bh-7,'text-anchor':'middle',fill:'#303438','font-size':11},detail(r))});
 }
 function scatter(id,rows,xFn,yFn,sizeFn,colorFn,labelFn,opts={}){
  const s=svg(id),w=s.clientWidth||650,h=260,p={l:52,r:28,t:16,b:38};s.setAttribute('viewBox',`0 0 ${w} ${h}`);axes(s,w,h,p);
  const xMin=opts.xMin??0,xMax=opts.xMax||max(rows,xFn),yMin=opts.yMin??0,yMax=opts.yMax||max(rows,yFn),xSpan=Math.max(xMax-xMin,1),ySpan=Math.max(yMax-yMin,1),sMax=max(rows,sizeFn);
- rows.forEach((r,i)=>{const x=p.l+((xFn(r)-xMin)/xSpan)*(w-p.l-p.r),y=h-p.b-((yFn(r)-yMin)/ySpan)*(h-p.t-p.b),rr=4+(sizeFn(r)/sMax)*17;const dot=add(s,'circle',{cx:x,cy:y,r:rr,fill:colorFn(r),opacity:.78,stroke:'#071f24','stroke-width':1});bindInfo(dot,String(labelFn(r)),`横轴值：${money(xFn(r))}<br>纵轴值：${Number(yFn(r)||0).toFixed(2)}<br>圆大小指标：${nfmt(sizeFn(r))}${r.customer_state?`<br>州：${htmlEscape(r.customer_state)}`:''}${r.category_cn?`<br>品类：${htmlEscape(r.category_cn)}`:''}${r.seller_label?`<br>卖家：${htmlEscape(r.seller_label)}`:''}${r.avg_review_score!==undefined?`<br>平均评分：${Number(r.avg_review_score||0).toFixed(2)}`:''}${r.late_delivery_rate!==undefined?`<br>延迟率：${pct(r.late_delivery_rate)}`:''}`);if(i<(opts.labels||8))add(s,'text',{x:x+rr+4,y:y+4,fill:'#d8e6e9','font-size':10.5},String(labelFn(r)).slice(0,12))});
- add(s,'text',{x:p.l,y:h-10,fill:'#9ab2b8','font-size':11},opts.xLabel||'');add(s,'text',{x:8,y:p.t+4,fill:'#9ab2b8','font-size':11},opts.yLabel||'');
+ rows.forEach((r,i)=>{const x=p.l+((xFn(r)-xMin)/xSpan)*(w-p.l-p.r),y=h-p.b-((yFn(r)-yMin)/ySpan)*(h-p.t-p.b),rr=4+(sizeFn(r)/sMax)*17;const dot=add(s,'circle',{cx:x,cy:y,r:rr,fill:colorFn(r),opacity:.78,stroke:'#ffffff','stroke-width':1});bindInfo(dot,String(labelFn(r)),`横轴值：${money(xFn(r))}<br>纵轴值：${Number(yFn(r)||0).toFixed(2)}<br>圆大小指标：${nfmt(sizeFn(r))}${r.customer_state?`<br>州：${htmlEscape(r.customer_state)}`:''}${r.category_cn?`<br>品类：${htmlEscape(r.category_cn)}`:''}${r.seller_label?`<br>卖家：${htmlEscape(r.seller_label)}`:''}${r.avg_review_score!==undefined?`<br>平均评分：${Number(r.avg_review_score||0).toFixed(2)}`:''}${r.late_delivery_rate!==undefined?`<br>延迟率：${pct(r.late_delivery_rate)}`:''}`);if(i<(opts.labels||8))add(s,'text',{x:x+rr+4,y:y+4,fill:'#303438','font-size':10.5},String(labelFn(r)).slice(0,12))});
+ add(s,'text',{x:p.l,y:h-10,fill:'#60666c','font-size':11},opts.xLabel||'');add(s,'text',{x:8,y:p.t+4,fill:'#60666c','font-size':11},opts.yLabel||'');
 }
-</script><script>function render(){lineChart('rev',data.monthly,[{name:'月度销售额',value:r=>r.revenue,color:C.blue,format:money}]);lineChart('orderAov',data.monthly,[{name:'订单数',value:r=>r.order_count,color:C.blue,format:nfmt},{name:'平均客单价',value:r=>r.avg_order_value,color:C.gold,dash:'5 5',width:2.5,format:money}]);bars('cat',data.categories.slice(0,10),r=>r.category_cn,r=>r.revenue,r=>money(r.revenue),C.purple,{h:340,left:112,right:140});bars('state',data.states.slice(0,10),r=>r.customer_state,r=>r.revenue,r=>money(r.revenue),C.blue,{h:340,left:70,right:140});bars('seller',data.sellers.slice(0,10),r=>r.seller_label,r=>r.revenue,r=>money(r.revenue),C.green,{h:340,left:90,right:140,labelLen:14});const pay=Object.values(data.payment.reduce((m,r)=>{const k=r.payment_type_cn;m[k]=m[k]||{payment_type_cn:k,payment_value:0};m[k].payment_value+=r.payment_value;return m;},{})).sort((a,b)=>b.payment_value-a.payment_value);bars('pay',pay,r=>r.payment_type_cn,r=>r.payment_value,r=>money(r.payment_value)+' / '+pct(r.payment_value/sum(pay,x=>x.payment_value)),r=>r.payment_type_cn==='信用卡'?C.orange:C.purple,{left:78,right:180});bars('status',data.status,r=>r.order_status_cn,r=>r.order_count,r=>nfmt(r.order_count),r=>r.order_status_cn==='已送达'?C.green:C.red,{left:78,right:100})}render();window.addEventListener('resize',render);</script></body></html>
+</script><script>function render(){lineChart('rev',data.monthly,[{name:'月度销售额',value:r=>r.revenue,color:C.blue,format:money}]);lineChart('orderAov',data.monthly,[{name:'订单数',value:r=>r.order_count,color:C.blue,format:nfmt},{name:'平均客单价',value:r=>r.avg_order_value,color:C.gold,dash:'5 5',width:2.5,format:money}]);bars('cat',data.categories.slice(0,10),r=>r.category_cn,r=>r.revenue,r=>money(r.revenue),C.blue,{h:340,left:112,right:140});bars('state',data.states.slice(0,10),r=>r.customer_state,r=>r.revenue,r=>money(r.revenue),C.blue,{h:340,left:70,right:140});bars('seller',data.sellers.slice(0,10),r=>r.seller_label,r=>r.revenue,r=>money(r.revenue),C.blue,{h:340,left:90,right:140,labelLen:14});const pay=Object.values(data.payment.reduce((m,r)=>{const k=r.payment_type_cn;m[k]=m[k]||{payment_type_cn:k,payment_value:0};m[k].payment_value+=r.payment_value;return m;},{})).sort((a,b)=>b.payment_value-a.payment_value);bars('pay',pay,r=>r.payment_type_cn,r=>r.payment_value,r=>money(r.payment_value)+' / '+pct(r.payment_value/sum(pay,x=>x.payment_value)),r=>r.payment_type_cn==='信用卡'?C.green:C.gray,{left:78,right:180});bars('status',data.status,r=>r.order_status_cn,r=>r.order_count,r=>nfmt(r.order_count),r=>r.order_status_cn==='已送达'?C.green:C.red,{left:78,right:100})}render();window.addEventListener('resize',render);</script></body></html>
